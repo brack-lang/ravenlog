@@ -1,0 +1,49 @@
+@scope (.new_external_posts_section) {
+  :scope {
+    margin: 40px 10dvw 0;
+  }
+
+  .description {
+    font-size: 14px;
+    color: #bbb;
+    padding-top: 4px;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .icon {
+    color: #eee;
+    margin-right: 8px;
+    height: 1em;
+  }
+
+  .note_possible_to_slide {
+    font-size: 8pt;
+    color: #bbb;
+    text-align: center;
+    margin-top: 4px;
+  }
+
+  .link_to_index_page {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: right;
+
+    a {
+      color: #bbb;
+      text-decoration: none;
+      border-bottom: 1px solid #bbb;
+    }
+  }
+
+  .postcard_wrapper {
+    > a {
+      margin-right: 5px;
+    }
+  }
+}

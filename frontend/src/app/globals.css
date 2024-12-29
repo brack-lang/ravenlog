@@ -1,0 +1,50 @@
+h2 {
+  font-size: 22px;
+}
+
+.posts_section {
+  margin: 40px 10dvw 0;
+}
+
+.postcard_wrapper {
+  display: flex;
+  overflow-x: scroll;
+  margin: 10px -10dvw;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-right: calc(10dvw - 10px);
+}
+
+.postcard_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.postcard_wrapper > :first-child {
+  margin-left: 10dvw;
+}
+
+#root {
+  color: white;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+  color: white;
+}
+
+html,
+body {
+  background-color: #222;
+  font-weight: 400;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0 0 0 1em;
+  padding: 0;
+}

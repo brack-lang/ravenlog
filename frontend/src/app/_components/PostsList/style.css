@@ -1,0 +1,20 @@
+@scope (.postsList) {
+  height: 600px;
+  
+  .postsList_list {
+    list-style: none;
+  }
+
+  .postsList_item {
+    margin-top: 2px;
+    list-style: initial;
+  }
+
+  .postsList_description {
+    list-style: none;
+
+    li {
+      color: #222;
+    }
+  }
+}

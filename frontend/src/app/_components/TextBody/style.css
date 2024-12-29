@@ -1,0 +1,34 @@
+@scope (.text-body) {
+  :scope {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 600px) {
+    .wrapper {
+      max-width: 800px;
+      background-color: #eee;
+      border-radius: 5px;
+      margin: 50px 20px 0;
+      padding: 30px 50px 100px;
+      font-size: 10pt;
+      font-weight: 300;
+      line-height: 1.8em;
+      width: 75dvw;
+      color: #222;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      background-color: #eee;
+      font-size: 10pt;
+      font-weight: 300;
+      margin-top: 50px;
+      padding: 30px 50px 100px;
+      line-height: 1.8em;
+      color: #222;
+      width: 100%;
+    }
+  }
+}

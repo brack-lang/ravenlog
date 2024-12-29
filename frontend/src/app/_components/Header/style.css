@@ -1,0 +1,32 @@
+@scope (.header) {
+  h1 {
+    text-align: center;
+    padding-top: 80px;
+    font-size: 28px;
+    margin: 0px 30px;
+    word-break: auto-phrase;
+  }
+
+  p {
+    text-align: center;
+    padding: 12px 10px;
+    margin: 0 4px;
+    font-size: 14px;
+    color: #bbb;
+    word-break: auto-phrase;
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    color: #bbb;
+    text-align: center;
+    font-size: 10pt;
+  }
+}
