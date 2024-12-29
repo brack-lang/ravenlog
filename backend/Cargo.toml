@@ -1,0 +1,20 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rl"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.93"
+brack = { git = "https://github.com/brack-lang/brack" }
+brack-project-manager = { git = "https://github.com/brack-lang/brack", package = "brack-project-manager" }
+toml = "0.8.14"
+reqwest = "0.12.9"
+serde_json = "1.0.133"
+serde = { version = "1.0.215", features = ["derive"] }
+clap = { version = "4.5.21", features = ["derive"] }
+walkdir = "2.5.0"
+tokio = "1.41.1"
