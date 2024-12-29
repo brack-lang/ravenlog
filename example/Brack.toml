@@ -1,0 +1,8 @@
+[document]
+name = "example"
+version = "0.1.0"
+backend = "jsx"
+extension = "jsx"
+authors = ["Mutsuha Asada <me@momee.mt>"]
+
+[plugins]
