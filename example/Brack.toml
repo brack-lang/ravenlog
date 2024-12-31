@@ -5,4 +5,8 @@ backend = "jsx"
 extension = "jsx"
 authors = ["Mutsuha Asada <me@momee.mt>"]
 
-[plugins]
+[plugins.ravenlog]
+schema = "github"
+owner = "brack-lang"
+repo = "ravenlog.jsx"
+version = "v-0.0.1-dev-3"

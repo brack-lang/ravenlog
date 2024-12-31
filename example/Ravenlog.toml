@@ -1,0 +1,50 @@
+title = "My Blog"
+description = "My tech blog"
+comments = [
+    "Hello, World!",
+    "This is my tech blog",
+    "The writing is mostly about programming and software development"
+]
+logo = "logo.png"
+
+[footer]
+admin = "Taro Yamada"
+period = "2024-2025"
+links = []
+
+[posts]
+heading = "Recent Posts"
+description = "The latest articles on my blog"
+
+[external]
+heading = "External Articles"
+description = "My articles on Zenn and note"
+
+[external.zenn]
+id = "momeemt"
+
+[external.note]
+id = "momeemt"
+
+[daily]
+heading = "Daily Report"
+description = "My daily report"
+
+[weekly]
+heading = "Weekly Report"
+description = "My weekly report"
+
+[monthly]
+heading = "Monthly Report"
+description = "My monthly report"
+
+[annual]
+heading = "Annual Report"
+description = "My annual report"
+
+[[authors]]
+id = "taro"
+name = "Taro Yamada"
+description = "Software Engineer"
+icon = "authors/taro.png"
+admin = true

@@ -683,11 +683,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1735264675,
-        "narHash": "sha256-MgdXpeX2GuJbtlBrH9EdsUeWl/yXEubyvxM1G+yO4Ak=",
+        "lastModified": 1735531152,
+        "narHash": "sha256-As8I+ebItDKtboWgDXYZSIjGlKeqiLBvjxsQHUmAf1Q=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d49da4c08359e3c39c4e27c74ac7ac9b70085966",
+        "rev": "3ffbbdbac0566a0977da3d2657b89cbcfe9a173b",
         "type": "github"
       },
       "original": {
@@ -919,11 +919,11 @@
       },
       "locked": {
         "dir": "backend",
-        "lastModified": 1735460667,
-        "narHash": "sha256-n3HvDlhmek4JQ784x4RNYHwqtO/tG1W+lmNN3bWYRLg=",
+        "lastModified": 1735635427,
+        "narHash": "sha256-WBObc9yMyNBNO+TjDb2rqU8xGURa0crjyFmh/q/SZdY=",
         "owner": "brack-lang",
         "repo": "ravenlog",
-        "rev": "393e12e273db08b54d5b4f773cfb820b8bd5e81a",
+        "rev": "f58bc0227ecf9411c74150507faf99300ecd7bea",
         "type": "github"
       },
       "original": {
