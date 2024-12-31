@@ -76,7 +76,8 @@ pub struct Annual {
 #[derive(Debug, Default, Serialize, Deserialize)]
 pub struct BlogSettings {
     pub title: String,
-    pub description: Vec<String>,
+    pub description: String,
+    pub comments: Vec<String>,
     pub footer: Footer,
     pub logo: String,
     pub favicon: Favicon,
