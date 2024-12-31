@@ -36,7 +36,7 @@ const Home = () => {
         title={BlogSettings.external.heading}
         description={BlogSettings.external.description}
         to_index_page_link="/external_posts"
-        external_posts={ExternalPosts}
+        external_posts={ExternalPosts.posts}
         icon={faGlobe}
       />
       <PostsSection

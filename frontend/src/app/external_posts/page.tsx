@@ -13,7 +13,7 @@ const Daily = () => {
         description={`${ExternalPosts.length}件の記事があります`}
         show_goto_top_link={true}
       />
-      <ExternalPostsList posts={ExternalPosts} />
+      <ExternalPostsList posts={ExternalPosts.posts} />
       <Footer />
     </>
   );
