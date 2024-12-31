@@ -16,6 +16,5 @@ runs:
     - run: bash ./deploy.sh
       shell: bash
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WORKING_DIRECTORY: ${{ inputs.working-directory }}
         DEPLOY_BRANCH: ${{ inputs.deploy-branch }}
