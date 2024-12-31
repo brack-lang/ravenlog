@@ -1,0 +1,20 @@
+name: Build and deploy the Ravenlog project
+inputs:
+  working-directory:
+    description: "The working directory to run the deploy script in"
+    required: false
+    default: "."
+  deploy-branch:
+    description: "The branch to deploy to"
+    required: false
+    default: "deploy-ravenlog"
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v4
+    - uses: cachix/install-nix-action@v30
+    - run: bash ./deploy.sh
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WORKING_DIRECTORY: ${{ inputs.working-directory }}
+        DEPLOY_BRANCH: ${{ inputs.deploy-branch }}
