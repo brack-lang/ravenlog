@@ -3,8 +3,8 @@ set -eou pipefail
 cd $WORKING_DIRECTORY
 nix run "github:brack-lang/ravenlog?dir=backend" build
 git clone https://github.com/brack-lang/ravenlog
-mkdir workspace
-mv ravenlog/frontend/* workspace
+mkdir -p workspace
+mv ravenlog/frontend/* workspace/
 cp .ravenlog/blog_settings.json workspace/src/app/_assets/
 cp .ravenlog/posts.json workspace/src/app/_assets/
 cp -r .ravenlog/assets/** workspace/public/
