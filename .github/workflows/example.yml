@@ -1,0 +1,17 @@
+name: Example Ravenlog Build
+on:
+  push:
+    branches-ignore:
+      - 'dependabot/**'
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        uses: brack-lang/ravenlog/actions/deploy@main
+        with:
+          working-directory: example
+          deploy-branch: deploy-ravenlog
