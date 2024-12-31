@@ -8,6 +8,9 @@ inputs:
     description: "The branch to deploy to"
     required: false
     default: "deploy-ravenlog"
+  github-token:
+    description: "The GitHub token to use for the deploy"
+    required: true
 runs:
   using: "composite"
   steps:
@@ -21,3 +24,4 @@ runs:
       env:
         WORKING_DIRECTORY: ${{ inputs.working-directory }}
         DEPLOY_BRANCH: ${{ inputs.deploy-branch }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}

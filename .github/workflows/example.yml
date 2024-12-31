@@ -5,6 +5,9 @@ on:
       - 'dependabot/**'
   pull_request:
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-24.04
@@ -15,3 +18,4 @@ jobs:
         with:
           working-directory: example
           deploy-branch: deploy-ravenlog
+          github-token: ${{ secrets.GITHUB_TOKEN }}

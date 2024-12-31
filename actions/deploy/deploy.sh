@@ -13,7 +13,7 @@ find . -mindepth 1 -maxdepth 1 ! -name 'workspace' ! -name '.git' -exec rm -rf {
 mv workspace/* .
 rm -rf workspace
 
-REMOTE_URL="https://github.com/$GITHUB_REPOSITORY.git"
+REMOTE_URL="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
 git init
 git remote add origin "$REMOTE_URL"
 git branch -m "$DEPLOY_BRANCH"
