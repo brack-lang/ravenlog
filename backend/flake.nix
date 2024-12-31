@@ -32,7 +32,7 @@
           cargo = pkgs.rust-bin.stable.latest.default;
         };
         generatedCargoNix = crate2nix.tools.${system}.generatedCargoNix {
-          name = "backend";
+          name = "rl";
           src = ./.;
         };
         cargoNix = import generatedCargoNix {
