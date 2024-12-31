@@ -14,6 +14,7 @@ const ExternalPostcard = ({ post }: Props) => {
   }
   const base = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
   const iconUrl = `${base}/${author.icon}`;
+  const logoUrl = `${base}/${BlogSettings.logo}`;
   return (
     <a className="external_postcard"
       href={post.link} target="_blank" rel="noopener noreferrer">
@@ -36,7 +37,7 @@ const ExternalPostcard = ({ post }: Props) => {
                 <div className="name">{author.name}</div>
                 <div className="date">{post.pubDate}</div>
               </div>
-              {post.media === "Zenn" ? (
+              {post.media === "zenn" ? (
                 <Image
                   className="zenn"
                   src="/zenn.webp"
@@ -53,9 +54,9 @@ const ExternalPostcard = ({ post }: Props) => {
                   height={30}
                 />
               ) : (
-                <Image
+                <img
                   className="logo"
-                  src="/blog-logo.webp"
+                  src={logoUrl}
                   alt="the blog's logo"
                   height={40}
                   width={-1}

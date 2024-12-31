@@ -1,4 +1,3 @@
-import ExternalPosts from "./_assets/external_posts.json";
 import {
   faKiwiBird,
   faGlobe,
@@ -15,8 +14,10 @@ import { getRandomComment } from "./_utils/posts";
 import ExternalPostsSection from "./_components/ExternalPostsSection";
 import BlogSettings from "./_assets/blog_settings.json";
 
-const Home = () => {
+const Home = async () => {
   const comment = getRandomComment();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+  const externalPosts = await fetch(`${baseUrl}/api/external_posts`).then((res) => res.json());
   return (
     <>
       <Header
@@ -36,7 +37,7 @@ const Home = () => {
         title={BlogSettings.external.heading}
         description={BlogSettings.external.description}
         to_index_page_link="/external_posts"
-        external_posts={ExternalPosts.posts}
+        external_posts={externalPosts.posts}
         icon={faGlobe}
       />
       <PostsSection
