@@ -38,10 +38,6 @@ export type Footer = {
   links: Link[];
 };
 
-export type Favicon = {
-  enable: boolean;
-};
-
 export type PostsList = {
   heading: string;
   description: string;
@@ -49,50 +45,38 @@ export type PostsList = {
 };
 
 export type ExternalZenn = {
-  enable: boolean;
   id: string;
 };
 
 export type ExternalNote = {
-  enable: boolean;
   id: string;
 };
 
 export type External = {
-  enable: boolean;
   heading: string;
   description: string;
-  icon: string;
-  zenn?: ExternalZenn;
-  note?: ExternalNote;
+  zenn: ExternalZenn;
+  note: ExternalNote;
 };
 
 export type Daily = {
-  enable: boolean;
   heading: string;
   description: string;
-  icon: string;
 };
 
 export type Weekly = {
-  enable: boolean;
   heading: string;
   description: string;
-  icon: string;
 };
 
 export type Monthly = {
-  enable: boolean;
   heading: string;
   description: string;
-  icon: string;
 };
 
 export type Annual = {
-  enable: boolean;
   heading: string;
   description: string;
-  icon: string;
 };
 
 export type BlogSettings = {
@@ -101,7 +85,6 @@ export type BlogSettings = {
   comments: string[];
   footer: Footer;
   logo: string;
-  favicon: Favicon;
   external: External;
   daily: Daily;
   weekly: Weekly;
