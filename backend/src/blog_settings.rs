@@ -5,6 +5,13 @@ use crate::author::Author;
 pub struct Footer {
     pub admin: String,
     pub period: String,
+    pub links: Vec<Link>,
+}
+
+#[derive(Debug, Default, Serialize, Deserialize)]
+pub struct Link {
+    pub text: String,
+    pub href: String,
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]
