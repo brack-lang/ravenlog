@@ -9,4 +9,5 @@ pub struct Author {
     pub website: Option<String>,
     pub github_id: Option<String>,
     pub x_id: Option<String>,
+    pub admin: Option<bool>,
 }
