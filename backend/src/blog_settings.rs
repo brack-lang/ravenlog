@@ -27,7 +27,6 @@ pub struct ExternalNote {
 pub struct External {
     pub heading: String,
     pub description: String,
-    pub icon: String,
     pub zenn: ExternalZenn,
     pub note: ExternalNote,
 }
