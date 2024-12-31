@@ -2,9 +2,9 @@ use anyhow::Result;
 use clap::{Parser, Subcommand};
 use std::fs::read_to_string;
 use std::path::Path;
-use backend::author::Author;
-use backend::post::{Post, Posts};
-use backend::blog_settings::BlogSettings;
+use rl::author::Author;
+use rl::post::{Post, Posts};
+use rl::blog_settings::BlogSettings;
 use std::collections::HashMap;
 
 #[derive(Parser, Debug)]
