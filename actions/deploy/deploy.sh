@@ -16,7 +16,9 @@ rm -rf workspace
 REMOTE_URL="https://github.com/$GITHUB_REPOSITORY.git"
 git init
 git remote add origin "$REMOTE_URL"
-git switch -c "$DEPLOY_BRANCH"
+git branch -m "$DEPLOY_BRANCH"
+git config user.name "github-actions[bot]"
+git config user.email "github-actions[bot]@users.noreply.github.com"
 git add .
 git commit -m "Deploy $GITHUB_SHA"
 git push origin "$DEPLOY_BRANCH" --force
