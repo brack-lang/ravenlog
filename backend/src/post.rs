@@ -14,6 +14,17 @@ pub struct Post {
     pub slug: String,
     pub date: String,
     pub body: String,
+    pub post_type: PostType,
+}
+
+#[derive(Debug, Clone, Default, Serialize, Deserialize)]
+pub enum PostType {
+    #[default]
+    Post,
+    Daily,
+    Weekly,
+    Monthly,
+    Annual,
 }
 
 #[derive(Debug, Clone, Default, Serialize, Deserialize)]
@@ -27,6 +38,10 @@ pub struct RawPost {
 #[derive(Debug, Clone, Default, Serialize, Deserialize)]
 pub struct Posts {
     pub posts: Vec<Post>,
+    pub daily: Vec<Post>,
+    pub weekly: Vec<Post>,
+    pub monthly: Vec<Post>,
+    pub annual: Vec<Post>,
 }
 
 impl Post {
@@ -39,12 +54,20 @@ impl Post {
         let raw_post: RawPost = toml::from_str(&settings)?;
         let author = authors.get(&raw_post.author_id).ok_or_else(|| anyhow!("Author not found"))?;
         let body = read_to_string(&brack_file_path)?;
+        let post_type = match slug {
+            "daily" => PostType::Daily,
+            "weekly" => PostType::Weekly,
+            "monthly" => PostType::Monthly,
+            "annual" => PostType::Annual,
+            _ => PostType::Post,
+        };
         Ok(Self {
             title: raw_post.title,
             description: raw_post.description,
             tags: raw_post.tags,
             author: author.clone(),
             slug: slug.to_string(),
+            post_type,
             date,
             body,
         })

@@ -52,6 +52,10 @@ async fn build(project_path: String) -> Result<()> {
         .filter(|e| e.path().extension().map_or(false, |e| e == "jsx"));
 
     let mut posts = Vec::new();
+    let mut daily = Vec::new();
+    let mut weekly = Vec::new();
+    let mut monthly = Vec::new();
+    let mut annual = Vec::new();
     for entry in jsx {
         let path = entry.path();
         let date_slug_path = path.strip_prefix(format!("{}/out/", project_path))?.parent().unwrap();
@@ -60,10 +64,27 @@ async fn build(project_path: String) -> Result<()> {
             eprintln!("{} not found", ravenlog_toml_path);
             std::process::exit(1);
         }
-        posts.push(build_post_from_toml(ravenlog_toml_path, path, id_to_authors.clone())?);
+        let post = build_post_from_toml(ravenlog_toml_path, path, id_to_authors.clone())?;
+        match post.post_type {
+            rl::post::PostType::Daily => daily.push(post),
+            rl::post::PostType::Weekly => weekly.push(post),
+            rl::post::PostType::Monthly => monthly.push(post),
+            rl::post::PostType::Annual => annual.push(post),
+            _ => posts.push(post),
+        }
     }
     posts.sort_by(|a, b| b.date.cmp(&a.date));
-    let posts = Posts { posts };
+    daily.sort_by(|a, b| b.date.cmp(&a.date));
+    weekly.sort_by(|a, b| b.date.cmp(&a.date));
+    monthly.sort_by(|a, b| b.date.cmp(&a.date));
+    annual.sort_by(|a, b| b.date.cmp(&a.date));
+    let posts = Posts {
+        posts,
+        daily,
+        weekly,
+        monthly,
+        annual,
+    };
     let posts = serde_json::to_string_pretty(&posts)?;
     std::fs::create_dir_all(format!("{}/.ravenlog", project_path))?;
     std::fs::write(format!("{}/.ravenlog/posts.json", project_path), posts)?;
