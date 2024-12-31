@@ -9,10 +9,14 @@ cp .ravenlog/blog_settings.json workspace/src/app/_assets/
 cp .ravenlog/posts.json workspace/src/app/_assets/
 cp -r .ravenlog/assets/** workspace/public/
 
-grep -v '^workspace/$' | grep -v '^\.git$' | xargs rm -rf
+find . -mindepth 1 -maxdepth 1 ! -name 'workspace' ! -name '.git' -exec rm -rf {} +
 mv workspace/* .
 rm -rf workspace
-git switch -c $DEPLOY_BRANCH
-git add *
-git commit -m "Deploy"
-git push origin $DEPLOY_BRANCH --force
+
+REMOTE_URL="https://github.com/$GITHUB_REPOSITORY.git"
+git init
+git remote add origin "$REMOTE_URL"
+git switch -c "$DEPLOY_BRANCH"
+git add .
+git commit -m "Deploy $GITHUB_SHA"
+git push origin "$DEPLOY_BRANCH" --force
