@@ -63,6 +63,11 @@
         packages = {
           default = cargoNix.rootCrate.build;
         };
+
+        app.default = {
+          type = "app";
+          program = "${self.packages.default}/bin/rl";
+        };
       }
     );
 }
