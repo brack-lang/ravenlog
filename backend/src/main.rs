@@ -37,6 +37,7 @@ fn build_post_from_toml<P1: AsRef<Path>, P2: AsRef<Path>>(settings_path: P1, bra
 }
 
 async fn build(project_path: String) -> Result<()> {
+    std::fs::create_dir_all(format!("{}/plugins", project_path))?;
     let mut project = brack_project_manager::project::Project::new(&project_path);
     project.load_brack_toml()?;
     project.download_plugins_using_config().await?;
@@ -67,6 +68,16 @@ async fn build(project_path: String) -> Result<()> {
     std::fs::create_dir_all(format!("{}/.ravenlog", project_path))?;
     std::fs::write(format!("{}/.ravenlog/posts.json", project_path), posts)?;
     std::fs::write(format!("{}/.ravenlog/blog_settings.json", project_path), serde_json::to_string_pretty(&blog_settings)?)?;
+    let assets = walkdir::WalkDir::new(format!("{}/assets", project_path))
+        .into_iter()
+        .filter_map(|e| e.ok())
+        .filter(|e| e.path().is_file());
+    for entry in assets {
+        let path = entry.path();
+        let dest = format!("{}/.ravenlog/assets/{}", project_path, path.strip_prefix(format!("{}/assets/", project_path))?.display());
+        std::fs::create_dir_all(std::path::Path::new(&dest).parent().unwrap())?;
+        std::fs::copy(path, dest)?;
+    }
     Ok(())
 }
 
