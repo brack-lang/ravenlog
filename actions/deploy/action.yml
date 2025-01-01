@@ -19,7 +19,7 @@ runs:
     - uses: cachix/cachix-action@v15
       with:
         name: ravenlog
-    - run: bash "${GITHUB_ACTION_PATH}/actions/deploy/deploy.sh"
+    - run: bash "${GITHUB_ACTION_PATH}/deploy.sh"
       shell: bash
       env:
         WORKING_DIRECTORY: ${{ inputs.working-directory }}
