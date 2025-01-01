@@ -19,9 +19,10 @@ runs:
     - uses: cachix/cachix-action@v15
       with:
         name: ravenlog
-    - run: bash ./actions/deploy/deploy.sh
+    - run: bash "${GITHUB_ACTION_PATH}/actions/deploy/deploy.sh"
       shell: bash
       env:
         WORKING_DIRECTORY: ${{ inputs.working-directory }}
         DEPLOY_BRANCH: ${{ inputs.deploy-branch }}
         GITHUB_TOKEN: ${{ inputs.github-token }}
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
