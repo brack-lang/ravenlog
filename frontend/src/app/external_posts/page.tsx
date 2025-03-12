@@ -22,6 +22,8 @@ const ExternalPosts = async () => {
 
 export default ExternalPosts;
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = {
   title: BlogSettings.external.heading,
 };
