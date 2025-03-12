@@ -4,7 +4,7 @@ import Posts from "../_assets/posts.json";
 
 const url = String(process.env.NEXT_PUBLIC_BASE_URL);
 
-export const revalidate = 60 * 60 * 24 * 1;
+export const revalidate = 86400;
 
 export async function GET() {
   const feed = new Rss({
