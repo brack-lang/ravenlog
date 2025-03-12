@@ -50,3 +50,5 @@ function formatPubDate(dateString: string | undefined): string {
 function stripHtmlTags(str: string): string {
   return str.replace(/<[^>]*>/g, '');
 }
+
+export const dynamic = "force-dynamic";

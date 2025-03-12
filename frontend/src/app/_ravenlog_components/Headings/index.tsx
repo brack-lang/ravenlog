@@ -1,7 +1,7 @@
 import "./style.css";
 
 type Props = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const Heading1 = ({ children }: Props) => {

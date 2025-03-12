@@ -1,8 +1,8 @@
 import "./style.css";
 
 type Props = {
-  href: string;
-  children: React.ReactNode;
+  href?: string;
+  children?: React.ReactNode;
 };
 
 const Anchor = ({ href, children }: Props) => {

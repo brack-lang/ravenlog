@@ -9,7 +9,7 @@ const glowSansFont = async () => {
   const base = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
   const url = new URL(`${base}/GlowSansJ-Normal-Bold.otf`, import.meta.url)
   const response = await fetch(url)
-  if (response.status == 200) {
+  if (response.status === 200) {
     return await response.arrayBuffer()
   }
   throw new Error('failed to load font data')

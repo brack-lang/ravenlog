@@ -1,4 +1,3 @@
-import { getRandomComment } from "../../utils/posts";
 import "./style.css";
 
 type Props = {

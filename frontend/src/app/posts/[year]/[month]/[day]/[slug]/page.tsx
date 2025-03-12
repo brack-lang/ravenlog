@@ -1,6 +1,6 @@
 import PostsData from "../../../../../_assets/posts.json";
 import type { Post as PostType } from "../../../../../_utils/types";
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import PostClient from "./client";
 
 const Posts = () => {
@@ -10,24 +10,25 @@ const Posts = () => {
 export default Posts;
 
 type Props = {
-  params: {
+  params: Promise<{
     year: string;
     month: string;
     day: string;
     slug: string;
-  };
+  }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const { year, month, day, slug } = await params;
   const post = PostsData.posts.find(
     (post: PostType) =>
-      post.slug === params.slug &&
-      post.date === `${params.year}/${params.month}/${params.day}`
+      post.slug === slug &&
+      post.date === `${year}/${month}/${day}`
   );
 
   if (post === undefined) {
     return {
-      title: `${params.year}/${params.month}/${params.day}/${params.slug} not found`,
+      title: `${year}/${month}/${day}/${slug} not found`,
     };
   }
 

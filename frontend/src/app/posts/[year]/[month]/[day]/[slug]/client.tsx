@@ -51,6 +51,7 @@ const InlineHighlight = ({ text, lang }: { text: string; lang: string }) => {
 
 export const PostClient = () => {
   const { year, month, day, slug } = useParams();
+  const JsxParserAny = JsxParser as unknown as React.FC<any>;
 
   const post = Posts.posts.find(
     (post: PostType) =>
@@ -62,7 +63,7 @@ export const PostClient = () => {
     <>
       <PostHeader post={post} />
       <TextBody>
-        <JsxParser
+        <JsxParserAny
           bindings={{}}
           components={{
             Stmt,

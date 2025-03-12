@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import "./style.css";
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 const Stmt = ({ children }: Props) => {
