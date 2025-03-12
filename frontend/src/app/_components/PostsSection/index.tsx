@@ -41,7 +41,6 @@ const PostsSection = ({
                 post={post}
                 key={post.slug}
                 blog_settings={blog_settings}
-                to_index_page_link={to_index_page_link}
               />
             ))}
         </div>
