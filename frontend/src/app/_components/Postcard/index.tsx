@@ -5,10 +5,11 @@ import type { CSSProperties } from 'react';
 type Props = {
   post: Post;
   blog_settings: BlogSettings;
+  to_index_page_link?: string;
   is_og?: boolean;
 };
 
-const Postcard = ({ post, blog_settings, is_og }: Props) => {
+const Postcard = ({ post, blog_settings, is_og, to_index_page_link }: Props) => {
   const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
   const iconUrl = `${siteUrl}/${post.author.icon}`;
   const logoUrl = `${siteUrl}/${blog_settings.logo}`;
@@ -107,7 +108,7 @@ const Postcard = ({ post, blog_settings, is_og }: Props) => {
     height: `${40 * outerWidth / 420}px`,
   }
   return (
-    <a style={style_postcard}href={`/posts/${post.date}/${post.slug}`}>
+    <a style={style_postcard}href={`/${to_index_page_link}/${post.date}/${post.slug}`}>
       <span style={style_outer}>
         <span style={style_inner}>
           <span style={style_container}>
