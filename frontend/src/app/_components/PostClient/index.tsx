@@ -2,15 +2,15 @@
 import JsxParser from "react-jsx-parser";
 import { codeToHtml } from "shiki";
 import Posts from "@/app/_assets/posts.json";
-import type { Post as PostType } from "../../../../../_utils/types";
+import type { Post as PostType } from "@/app/_utils/types";
 
-import "./page.css";
+import "./style.css";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import Footer from "../../../../../_components/Footer";
-import PostHeader from "../../../../../_components/PostHeader";
-import TextBody from "../../../../../_components/TextBody";
-import NotFound from "../../../../../not-found";
+import Footer from "@/app/_components/Footer";
+import PostHeader from "@/app/_components/PostHeader";
+import TextBody from "@/app/_components/TextBody";
+import NotFound from "@/app/not-found";
 
 import Anchor from "src/app/_ravenlog_components/Anchor";
 import Bold from "src/app/_ravenlog_components/Bold";

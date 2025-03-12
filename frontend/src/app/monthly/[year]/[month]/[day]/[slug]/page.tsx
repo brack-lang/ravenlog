@@ -20,7 +20,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const { year, month, day, slug } = await params;
-  const post = PostsData.posts.find(
+  const post = PostsData.monthly.find(
     (post: PostType) =>
       post.slug === slug &&
       post.date === `${year}/${month}/${day}`
