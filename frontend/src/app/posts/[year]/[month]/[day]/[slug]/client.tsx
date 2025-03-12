@@ -1,7 +1,7 @@
 "use client";
 import JsxParser from "react-jsx-parser";
 import { codeToHtml } from "shiki";
-import Posts from "../../../../../_assets/posts.json";
+import Posts from "@/app/_assets/posts.json";
 import type { Post as PostType } from "../../../../../_utils/types";
 
 import "./page.css";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Posts from "../_assets/posts.json";
+import Posts from "@/app/_assets/posts.json";
 import Footer from "../_components/Footer";
 import Header from "../_components/Header";
 import BlogSettings from "../_assets/blog_settings.json";

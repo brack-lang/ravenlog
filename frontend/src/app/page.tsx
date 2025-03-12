@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Footer from "./_components/Footer";
 import PostsSection from "./_components/PostsSection";
-import Posts from "./_assets/posts.json";
+import Posts from "@/app/_assets/posts.json";
 import Header from "./_components/Header";
 import { getRandomComment } from "./_utils/posts";
 import ExternalPostsSection from "./_components/ExternalPostsSection";

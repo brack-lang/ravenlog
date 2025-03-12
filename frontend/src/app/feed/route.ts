@@ -1,6 +1,6 @@
 import Rss from "rss";
 import BlogSettings from "../_assets/blog_settings.json";
-import Posts from "../_assets/posts.json";
+import Posts from "@/app/_assets/posts.json";
 
 const url = String(process.env.NEXT_PUBLIC_BASE_URL);
 

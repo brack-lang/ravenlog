@@ -1,4 +1,4 @@
-import PostsData from "../../../../../_assets/posts.json";
+import PostsData from "@/app/_assets/posts.json";
 import type { Post as PostType } from "../../../../../_utils/types";
 import type { Metadata, ResolvingMetadata } from "next";
 import PostClient from "./client";

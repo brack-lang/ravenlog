@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import Postcard from "../../_components/Postcard";
 import type { NextRequest } from "next/server";
 import BlogSettings from "../../_assets/blog_settings.json";
-import Posts from "../../_assets/posts.json";
+import Posts from "@/app/_assets/posts.json";
 import type { Post } from "../../_utils/types";
 
 const glowSansFont = async () => {

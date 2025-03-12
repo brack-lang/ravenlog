@@ -4,7 +4,7 @@ import BlogSettings from "../../_assets/blog_settings.json";
 import type { Author, Post } from "../../_utils/types";
 import NotFound from "src/app/not-found";
 import Header from "src/app/_components/Header";
-import Posts from "../../_assets/posts.json";
+import Posts from "@/app/_assets/posts.json";
 import Footer from "src/app/_components/Footer";
 import PostsList from "src/app/_components/PostsList";
 

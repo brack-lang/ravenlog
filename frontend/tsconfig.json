@@ -24,18 +24,18 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "frontend/src/*"
+        "src/*"
       ]
     },
     "target": "ES2017"
   },
   "include": [
-    "fronetnd/next-env.d.ts",
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
   ],
   "exclude": [
-    "fronetnd/node_modules"
+    "node_modules"
   ]
 }
