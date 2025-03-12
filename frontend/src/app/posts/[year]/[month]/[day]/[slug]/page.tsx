@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
       post.date === `${year}/${month}/${day}`
   );
 
+  console.log(post);
+
   if (post === undefined) {
     return {
       title: `${year}/${month}/${day}/${slug} not found`,

@@ -53,7 +53,8 @@ export const PostClient = () => {
   const { year, month, day, slug } = useParams();
   const JsxParserAny = JsxParser as unknown as React.FC<any>;
 
-  const post = Posts.posts.find(
+  const postsJson: PostType[] = Posts.posts.concat(Posts.daily, Posts.weekly, Posts.monthly, Posts.annual);
+  const post = postsJson.find(
     (post: PostType) =>
       post.slug === slug && post.date === `${year}/${month}/${day}`
   );
