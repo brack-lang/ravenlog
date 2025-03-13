@@ -1,0 +1,26 @@
+@scope (.postsList) {
+  height: 600px;
+  
+  .postsList_list {
+    list-style: none;
+  }
+
+  .postsList_item {
+    margin-top: 2px;
+    list-style: initial;
+  }
+
+  .postsList_description {
+    list-style: none;
+
+    li {
+      color: #222;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      max-height: calc(1.5em * 1);
+    }
+  }
+}

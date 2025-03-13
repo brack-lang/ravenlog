@@ -1,0 +1,35 @@
+{
+  "name": "ravenlog-frontend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@types/react-katex": "^3.0.4",
+    "@types/rss": "^0.0.32",
+    "katex": "^0.16.18",
+    "next": "15.1.3",
+    "prettier": "^3.4.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-jsx-parser": "^2.2.2",
+    "rss": "^1.2.2",
+    "rss-parser": "^3.13.0",
+    "shiki": "^1.24.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5.7.2"
+  }
+}
