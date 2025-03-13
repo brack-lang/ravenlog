@@ -11,7 +11,10 @@ import PostsList from "src/app/_components/PostsList";
 const AuthorPosts = () => {
   const { author_id } = useParams();
   const author = BlogSettings.authors.find((author: Author) => author.id === author_id);
-  const posts = Posts.posts.filter((post: Post) => post.author.id === author_id);
+  const all_posts = Posts.posts.concat(
+    Posts.annual, Posts.daily, Posts.monthly, Posts.weekly
+  )
+  const posts = all_posts.filter((post: Post) => post.author.id === author_id);
   return author == null ? (
     <NotFound />
   )
