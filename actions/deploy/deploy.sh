@@ -7,7 +7,7 @@ mkdir -p workspace
 mv ravenlog/frontend/* workspace/
 cp .ravenlog/blog_settings.json workspace/src/app/_assets/
 cp .ravenlog/posts.json workspace/src/app/_assets/
-cp -r .ravenlog/assets/** workspace/public/
+cp -r .ravenlog/assets/ workspace/public/
 
 find . -mindepth 1 -maxdepth 1 ! -name 'workspace' -exec rm -rf {} +
 mv workspace/* .
