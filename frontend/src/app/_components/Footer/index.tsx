@@ -1,6 +1,6 @@
 import Link from "next/link";
 import "./style.css";
-import BlogSettings from "../../_assets/blog_settings.json";
+import BlogSettings from "@/app/_assets/blog_settings.json";
 
 const Footer = () => {
   return (

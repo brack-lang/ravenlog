@@ -12,9 +12,6 @@ const ExternalPostcard = ({ post }: Props) => {
   if (!author) {
     throw new Error("author not found");
   }
-  const base = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const iconUrl = `${base}/${author.icon}`;
-  const logoUrl = `${base}/${BlogSettings.logo}`;
   return (
     <a className="external_postcard"
       href={post.link} target="_blank" rel="noopener noreferrer">
@@ -26,9 +23,9 @@ const ExternalPostcard = ({ post }: Props) => {
               <p className="description">{post.contentSnippet}</p>
             </div>
             <div className="metadata">
-              <img
+              <Image
                 className="icon"
-                src={iconUrl}
+                src={`/${author.icon}`}
                 alt="the author's icon"
                 width={40}
                 height={40}
@@ -54,9 +51,9 @@ const ExternalPostcard = ({ post }: Props) => {
                   height={30}
                 />
               ) : (
-                <img
+                <Image
                   className="logo"
-                  src={logoUrl}
+                  src={`/${BlogSettings.logo}`}
                   alt="the blog's logo"
                   height={40}
                   width={-1}

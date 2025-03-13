@@ -1,6 +1,7 @@
 import type { Post } from "../../_utils/types";
 import type { BlogSettings } from "src/app/_utils/types";
 import type { CSSProperties } from 'react';
+import Image from "next/image";
 
 type Props = {
   post: Post;
@@ -9,9 +10,6 @@ type Props = {
 };
 
 const Postcard = ({ post, blog_settings, is_og }: Props) => {
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const iconUrl = `${siteUrl}/${post.author.icon}`;
-  const logoUrl = `${siteUrl}/${blog_settings.logo}`;
   const outerWidth = is_og ? 1200 : 350;
   const style_postcard = {
     textDecoration: "none",
@@ -119,9 +117,9 @@ const Postcard = ({ post, blog_settings, is_og }: Props) => {
               </p>
             </span>
             <span style={style_metadata}>
-              <img
+              <Image
                 style={style_icon}
-                src={iconUrl}
+                src={`/${post.author.icon}`}
                 alt="the author's icon"
                 width={40 * outerWidth / 350}
                 height={40 * outerWidth / 350}
@@ -130,9 +128,9 @@ const Postcard = ({ post, blog_settings, is_og }: Props) => {
                 <span style={style_name}>{post.author.name}</span>
                 <span style={style_date}>{post.date}</span>
               </span>
-              <img
+              <Image
                 style={style_logo}
-                src={logoUrl}
+                src={`/${blog_settings.logo}`}
                 alt="the blog's logo"
                 height={40 * outerWidth / 350}
                 width={40 * outerWidth / 350 * 2}

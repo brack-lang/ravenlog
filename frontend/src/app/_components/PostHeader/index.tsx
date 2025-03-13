@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Post } from "../../_utils/types";
 import "./style.css";
 import Link from "next/link";
@@ -7,8 +8,6 @@ type Props = {
 };
 
 const Header = ({ post }: Props) => {
-  const base = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const iconUrl = `${base}/${post.author.icon}`;
   return (
     <header className="header">
       <h1 className="title">{post.title}</h1>
@@ -21,8 +20,8 @@ const Header = ({ post }: Props) => {
         ))}
       </p>
       <Link className="author" href={`/authors/${post.author.id}`}>
-        <img
-          src={iconUrl}
+        <Image
+          src={`/${post.author.icon}`}
           alt={post.author.name}
           width={30}
           height={30}
