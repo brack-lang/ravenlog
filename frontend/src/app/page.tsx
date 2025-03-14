@@ -9,20 +9,17 @@ import {
 import Footer from "./_components/Footer";
 import PostsSection from "./_components/PostsSection";
 import Posts from "@/app/_assets/posts.json";
-import Header from "./_components/Header";
-import { getRandomComment } from "./_utils/posts";
+import Header from "./_components/HeaderWithComment";
 import ExternalPostsSection from "./_components/ExternalPostsSection";
 import BlogSettings from "./_assets/blog_settings.json";
 
 const Home = async () => {
-  const comment = getRandomComment();
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
   const externalPosts = await fetch(`${baseUrl}/api/external_posts`).then((res) => res.json());
   return (
     <>
       <Header
         title={BlogSettings.title}
-        description={comment}
         show_goto_top_link={false}
       />
       <PostsSection

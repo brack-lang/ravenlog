@@ -11,7 +11,7 @@ const ExternalPosts = async () => {
     <>
       <Header
         title={BlogSettings.external.heading}
-        description={`${ExternalPosts.length}件の記事があります`}
+        description={`${externalPosts.posts.length}件の記事があります`}
         show_goto_top_link={true}
       />
       <ExternalPostsList posts={externalPosts.posts} />

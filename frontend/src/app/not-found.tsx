@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Footer from "./_components/Footer";
-import Header from "./_components/Header";
+import Header from "./_components/HeaderWithComment";
 import TextBody from "./_components/TextBody";
-import { getRandomComment } from "./_utils/posts";
 import BlogSettings from "./_assets/blog_settings.json";
 import "./not-found.css";
 
@@ -11,7 +10,6 @@ const NotFound = () => {
     <div className="not-found-page">
       <Header
         title={BlogSettings.title}
-        description={getRandomComment()}
         show_goto_top_link={false}
       />
       <TextBody>

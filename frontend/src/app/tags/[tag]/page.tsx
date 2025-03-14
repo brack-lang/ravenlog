@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation";
 import type { Post } from "../../_utils/types";
 import NotFound from "src/app/not-found";
-import Header from "src/app/_components/Header";
+import Header from "@/app/_components/Header";
 import Posts from "@/app/_assets/posts.json";
 import Footer from "src/app/_components/Footer";
 import PostsList from "src/app/_components/PostsList";

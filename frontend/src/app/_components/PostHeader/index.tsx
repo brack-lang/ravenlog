@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Post } from "../../_utils/types";
+import type { Post } from "@/app/_utils/types";
 import "./style.css";
 import Link from "next/link";
 
