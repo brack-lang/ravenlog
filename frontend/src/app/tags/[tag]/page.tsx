@@ -13,7 +13,13 @@ const TagsPosts = () => {
     return <NotFound />;
   }
   const decoded_tag = decodeURI(tag);
-  const posts = Posts.posts.filter((post: Post) => post.tags.includes(decoded_tag));
+  const allPosts = Posts.posts.concat(
+    Posts.annual,
+    Posts.daily,
+    Posts.monthly,
+    Posts.weekly
+  )
+  const posts = allPosts.filter((post: Post) => post.tags.includes(decoded_tag));
   return (<>
       <Header
         title={`#${decoded_tag}が付けられた記事`}
