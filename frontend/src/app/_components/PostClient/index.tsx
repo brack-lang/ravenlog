@@ -23,6 +23,7 @@ import {
   Heading6,
 } from "src/app/_ravenlog_components/Headings";
 import Italic from "src/app/_ravenlog_components/Italic";
+import RavenlogImage from "@/app/_ravenlog_components/RavenlogImage";
 import {
   ListItem,
   OrderedList,
@@ -83,6 +84,7 @@ export const PostClient = () => {
             OrderedList,
             ListItem,
             Anchor,
+            RavenlogImage,
           }}
           jsx={post.body}
         />
