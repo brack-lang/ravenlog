@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./style.css";
 import BlogSettings from "@/app/_assets/blog_settings.json";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -9,11 +10,11 @@ const Footer = () => {
       <div className="links">
         <Link href="/">Top</Link>|
         {BlogSettings.footer.links.map((link) => (
-          <>
-            <a href={link.href} target="_blank" rel="noreferrer" key={`${link.href}-${link.text}`}>
+          <React.Fragment key={`${link.href}-${link.text}`}>
+            <a href={link.href} target="_blank" rel="noreferrer">
               {link.text}
             </a>|
-          </>
+          </React.Fragment>
         ))}
         <Link href="/feed">RSS</Link>
       </div>
