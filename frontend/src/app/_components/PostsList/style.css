@@ -1,6 +1,4 @@
 @scope (.postsList) {
-  height: 600px;
-  
   .postsList_list {
     list-style: none;
   }
