@@ -18,7 +18,7 @@ const ExternalPostsList = ({ posts }: Props) => {
             >
               <span>
                 {post.pubDate}:{" "}
-                <a href={post.link} target="_blank" rel="noopenner noreffer">{post.title}</a>
+                <a href={post.link} target="_blank" rel="noreferrer noopenner">{post.title}</a>
               </span>
             </li>
           ))}
