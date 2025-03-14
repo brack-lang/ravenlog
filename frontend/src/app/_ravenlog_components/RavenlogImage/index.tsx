@@ -8,7 +8,7 @@ const RavenlogImage = ({ src }: Props) => {
   if (src == null) {
     return;
   }
-  return <Image src={src} alt="" />
+  return <Image src={src} alt="" fill />
 };
 
 export default RavenlogImage;
