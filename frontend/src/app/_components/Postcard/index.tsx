@@ -61,7 +61,7 @@ const Postcard = ({ post, blog_settings, is_og }: Props) => {
     fontSize: `${8 * outerWidth / 350}px`,
     color: "#222",
     fontWeight: "600",
-    marginTop: `${4 * outerWidth / 420}px`,
+    marginTop: `${8 * outerWidth / 420}px`,
   };
   const style_tags = {
     fontSize: `${8 * outerWidth / 350}px`,
@@ -89,14 +89,14 @@ const Postcard = ({ post, blog_settings, is_og }: Props) => {
   const style_name: CSSProperties = {
     display: "flex",
     flexDirection: "column",
-    fontSize: `${10 * outerWidth / 420}px`,
+    fontSize: `${13 * outerWidth / 420}px`,
     color: "#222",
     fontWeight: "600",
   };
   const style_date: CSSProperties = {
     display: "flex",
     flexDirection: "column",
-    fontSize: `${8 * outerWidth / 420}px`,
+    fontSize: `${10 * outerWidth / 420}px`,
     color: "#222",
     fontWeight: "600",
   }
