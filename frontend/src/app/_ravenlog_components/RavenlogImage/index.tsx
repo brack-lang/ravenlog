@@ -1,14 +1,19 @@
-import Image from "next/image";
-
 type Props = {
-  src?: string
+  src?: string,
+  alt?: string,
+  caption?: string,
 };
 
-const RavenlogImage = ({ src }: Props) => {
+const RavenlogImage = ({ src, alt, caption }: Props) => {
   if (src == null) {
     return;
   }
-  return <Image src={src} alt="" fill />
+  return (
+    <figure>
+      <img src={src} alt={alt} style={{ width: "100%" }} />
+      <figcaption style={{ textAlign: "center" }}>{caption}</figcaption>
+    </figure>
+  )
 };
 
 export default RavenlogImage;
