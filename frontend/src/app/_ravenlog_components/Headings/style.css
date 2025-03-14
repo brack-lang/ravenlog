@@ -1,53 +1,83 @@
 @scope (.ravenlog_heading1) {
   :scope {
     margin: 22px 0;
-    font-size: 22pt;
+    font-size: 20pt;
     font-weight: 500;
     color: #222;
+  }
+
+  :scope .sharp {
+    color: #888;
+    padding-right: 8px;
   }
 }
 
 @scope (.ravenlog_heading2) {
   :scope {
     margin: 22px 0;
-    font-size: 20pt;
+    font-size: 18pt;
     font-weight: 500;
     color: #222;
+  }
+
+  :scope .sharp {
+    color: #888;
+    padding-right: 8px;
   }
 }
 
 @scope (.ravenlog_heading3) {
   :scope {
     margin: 18px 0;
-    font-size: 18pt;
-    font-weight: 500;
-    color: #222;
-  }
-}
-
-@scope (.ravenlog_heading4) {
-  :scope {
-    margin: 18px 0;
     font-size: 16pt;
     font-weight: 500;
     color: #222;
   }
+
+  :scope .sharp {
+    color: #888;
+    padding-right: 8px;
+  }
 }
 
-@scope (.ravenlog_heading5) {
+@scope (.ravenlog_heading4) {
   :scope {
     margin: 14px 0;
     font-size: 14pt;
     font-weight: 500;
     color: #222;
   }
+
+  :scope .sharp {
+    color: #888;
+    padding-right: 6px;
+  }
 }
 
-@scope (.ravenlog_heading6) {
+@scope (.ravenlog_heading5) {
   :scope {
     margin: 14px 0;
     font-size: 12pt;
     font-weight: 500;
     color: #222;
+  }
+
+  :scope .sharp {
+    color: #888;
+    padding-right: 6px;
+  }
+}
+
+@scope (.ravenlog_heading6) {
+  :scope {
+    margin: 12px 0;
+    font-size: 10pt;
+    font-weight: 500;
+    color: #222;
+  }
+
+  :scope .sharp {
+    color: #888;
+    padding-right: 6px;
   }
 }
